@@ -1,0 +1,208 @@
+@import "../../_globalColor";
+
+/*React-headroom*/
+.headroom-wrapper {
+  max-height: 100px;
+}
+
+/* header */
+
+.header {
+  background-color: $lightBackground1;
+  max-width: 100%;
+  padding: 15px 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; // Ensure vertical alignment
+  z-index: 10000;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex; // Apply flex to the list for alignment
+  align-items: center; // Align list items vertically
+}
+
+.grey-color {
+  color: $subTitle;
+}
+
+.header li a {
+  display: block;
+  padding: 15px 20px;
+  color: $textColor;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: $headerHoverBG;
+}
+
+.header .logo-container {
+  display: flex;
+  align-items: center;
+  flex: 1; // Allow the logo container to grow
+}
+
+.header .logo {
+  text-decoration: none;
+  display: flex; // Apply flex for internal alignment
+  align-items: center;
+  margin-top: 10px;
+}
+
+.header .logo-name {
+  padding: 0 10px;
+  color: black;
+}
+
+.header .logo-image {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+/* menu */
+
+.header .menu {
+  display: none; // Hide menu by default, will be displayed in media query
+  transition: max-height 0.2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  padding: 0 20px;
+  user-select: none;
+  order: 2; // Place the menu icon at the end of the container
+}
+
+.header .menu-icon .navicon {
+  background: $iconBackground;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: $iconBackground;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 486px;
+  display: block; // Show the menu when checkbox is checked
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent !important;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* Responsive adjustments */
+
+@media (min-width: 48em) {
+  .header li {
+    float: none; // Remove any floating since we are using flexbox
+  }
+  .header .menu {
+    clear: none; // Clear property is not needed with flexbox
+    max-height: none; // Override max-height for larger screens
+    display: flex; // Use flexbox for the menu
+    justify-content: flex-end; // Menu items aligned to the end (right side)
+    align-items: center; // Center menu items vertically
+  }
+  .header .menu-icon {
+    display: none; // Hide menu icon on larger screens
+  }
+}
+
+@media (max-width: 960px) and (min-width: 768px) {
+  // Adjustments for medium-sized screens, if needed
+  .header {
+    padding: 10px 15px; // Possible reduced padding for medium-sized screens
+  }
+  .header .logo-container {
+    // If necessary, you can adjust the logo container size for medium screens
+  }
+}
+
+@media (max-width: 768px) {
+  .header .menu-icon {
+    // Ensure the menu icon is visible on smaller screens
+    display: block;
+  }
+  .header .menu {
+    // Since the menu is hidden by default, no changes are needed here
+  }
+  .header .logo-container {
+    // If necessary, adjust the logo size for small screens
+  }
+}
+
+/* Additional styles for menu button and animated icon transformations */
+
+.header .menu-btn {
+  display: none; // The menu button is hidden by default and only shown when needed
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: var(--menu-max-height); // Replace with the appropriate value
+  display: block; // Show the menu when the button is checked
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
