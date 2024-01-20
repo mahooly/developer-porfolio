@@ -1,0 +1,83 @@
+@import "globalColor";
+
+.dev-icons {
+  padding-left: 0;
+  list-style: none;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.software-skill-inline {
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.software-skill-inline > i {
+  color: $subTitle;
+}
+
+.software-skill-inline > i:hover {
+  color: $skillsColor;
+}
+
+.software-skill-inline > p {
+  color: $subTitle;
+  font-size: 10px;
+}
+
+.software-skill-inline > i:hover ~ p {
+  color: $skillsColor;
+}
+
+.skills-section {
+  text-align: center; // Centers the title and the skills container
+  h2 {
+    margin-bottom: 20px; // Spacing between title and skills
+    // Add additional styles for the title
+  }
+
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; // This centers the skill items in the container
+    gap: 20px; // This provides space between the items
+    margin: 0 auto; // This centers the skills-container if it has a max-width
+  }
+
+  .skill {
+    display: flex; // Make the .skill divs flex containers as well
+    flex-direction: row; // Arrange children (icon and text) in a row
+    align-items: center; // Vertically center the icon and text
+    gap: 10px; // Space between icon and text
+    padding: 10px; // Padding around the items
+    background-color: #f0f0f0; // Background color of the skill boxes
+    border-radius: 10px; // Rounded corners for the skill boxes
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Box-shadow for the skill boxes
+
+    &:hover {
+      background-color: darken(#f0f0f0, 10%); // Darkens the skill item on hover
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Makes the shadow more prominent on hover
+    }
+  }
+
+  .icon {
+    display: flex; // Use flexbox for the icon as well
+    align-items: center; // Center the icon itself if it is not a simple image or inline element
+    justify-content: center; // Center the icon horizontally in its container
+  }
+
+  .skill span {
+    display: flex; // Use flexbox for the text span as well
+    align-items: center; // Center the text span vertically
+  }
+}
+
+// Add media queries for responsiveness if needed
+@media (max-width: 600px) {
+  .skills-container {
+    flex-direction: column; // Stacks the skills vertically on small screens
+  }
+}
