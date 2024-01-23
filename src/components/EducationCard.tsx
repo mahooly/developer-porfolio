@@ -36,7 +36,7 @@ const EducationCard: FC<EducationCardProps> = ({school}) => {
 
     return (
         <div>
-            <Fade duration={1000}>
+            <Fade direction={"left"} duration={1000}>
                 <div className="education-card">
                     {school.logo && (
                         <div className="education-card-left">

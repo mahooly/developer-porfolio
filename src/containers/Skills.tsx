@@ -23,13 +23,27 @@ const Skills: React.FC = () => {
     return (
         <div className="main" id="skills">
             <div className="skills-main-div">
-                <Fade duration={1000}>
-                    <div className="skills-text-div">
+                <Fade direction={"left"} duration={1000}>
+                    <div className="skills-image-div">
                         <h1
                             className="skills-heading"
                         >
                             {skillsSection.title}{" "}
                         </h1>
+                        {skillsSection.skills.map((skills, i) => {
+                            return (
+                                <p
+                                    key={i}
+                                    className="subTitle skills-text"
+                                >
+                                    {skills}
+                                </p>
+                            );
+                        })}
+                    </div>
+                </Fade>
+                <Fade direction={"right"} duration={1000}>
+                    <div className="skills-text-div">
                         <p
                             className="dark-mode subTitle skills-text-subtitle"
                         >
@@ -37,16 +51,7 @@ const Skills: React.FC = () => {
                         </p>
                         <SoftwareSkill/>
                         <div>
-                            {skillsSection.skills.map((skills, i) => {
-                                return (
-                                    <p
-                                        key={i}
-                                        className="subTitle skills-text"
-                                    >
-                                        {skills}
-                                    </p>
-                                );
-                            })}
+
                         </div>
                     </div>
                 </Fade>

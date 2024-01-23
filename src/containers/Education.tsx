@@ -24,19 +24,14 @@ const educationInfo: EducationInfo = {
             logo: require("../assets/images/UC-vert-rgb.png"),
             subHeader: "Master of Science in Computer Science",
             duration: "September 2020 - December 2023",
-            desc: "Participated in the research of XXX and published 3 papers.",
-            descBullets: [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-            ]
+            desc: "Participated in the research of Decentralized Federated Learning in Vehicular Networks.",
         },
         {
-            schoolName: "Stanford University",
+            schoolName: "Sharif University of Technology",
             logo: require("../assets/images/sharif.png"),
             subHeader: "Bachelor of Science in Computer Engineering",
             duration: "September 2015 - August 2020",
-            desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-            descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+            desc: "Took courses about Software Engineering, Web Security, Operating Systems, ...",
         }
     ]
 };

@@ -8,7 +8,7 @@ const Greeting: React.FC = () => {
     return (
         <Fade duration={1000}>
             <div className="background-container">
-                <div className="greet-main" id="greeting">
+                <div className="greet-main" id="about">
                     <div className="greeting-main">
                         <div className="greeting-text-div">
                             <div>

@@ -23,7 +23,7 @@ function Header() {
                 </label>
                 <ul className="menu">
                     <li>
-                        <a href="#skills">About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li>
                         <a href="#skills">Skills</a>
@@ -35,7 +35,7 @@ function Header() {
                         <a href="#education">Education</a>
                     </li>
                     <li>
-                        <a href="#contact">Projects</a>
+                        <a href="#projects">Projects</a>
                     </li>
                     <li>
                         <a href="#contact">Contact Me</a>
