@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Skills.scss";
 import {Fade} from "react-awesome-reveal";
 import SoftwareSkill from "../components/SoftwareSkill";
+import {Icon} from "@iconify/react";
 
 interface SkillsSection {
     title: string;
@@ -11,11 +12,14 @@ interface SkillsSection {
 
 const skillsSection: SkillsSection = {
     title: "Skills",
-    subTitle: "hello",
+    subTitle: "",
     skills: [
-        "Develop highly interactive Front end / User Interfaces for your web and mobile applications",
-        "Progressive Web Applications ( PWA ) in normal and SPA Stacks",
-        "Integration of third party services such as Firebase/ AWS / Digital Ocean"
+        "Expertise in full-stack web development, encompassing both frontend and backend aspects of web applications.",
+        "Proficiency in creating secure, scalable, and efficient digital solutions for diverse business requirements.",
+        "Skilled in designing and managing databases for high-volume online transactions.",
+        "Proficient in automating tasks and implementing RESTful APIs to enhance web application functionality.",
+        "Ability to adapt to new technologies quickly and efficiently for project requirements.",
+        "Experience in mentoring and leading teams in an agile and Scrum-based development environment.",
     ]
 };
 
@@ -32,27 +36,29 @@ const Skills: React.FC = () => {
                         </h1>
                         {skillsSection.skills.map((skills, i) => {
                             return (
-                                <p
-                                    key={i}
-                                    className="subTitle skills-text"
-                                >
-                                    {skills}
-                                </p>
+
+                                <div key={i}
+                                     className="skills-text">
+                                    <div
+                                        className="icon icon-lg icon-shape shadow-sm rounded-circle m-1 circle"
+                                    >
+                                        <Icon icon="pepicons-print:circle-big" data-inline="false"></Icon>
+                                    </div>
+                                    <span>{skills}</span>
+                                </div>
+
                             );
                         })}
                     </div>
                 </Fade>
                 <Fade direction={"right"} duration={1000}>
                     <div className="skills-text-div">
-                        <p
-                            className="dark-mode subTitle skills-text-subtitle"
+                        <h1
+                            className="skills-heading"
                         >
-                            {skillsSection.subTitle}
-                        </p>
+                            <br></br>
+                        </h1>
                         <SoftwareSkill/>
-                        <div>
-
-                        </div>
                     </div>
                 </Fade>
             </div>

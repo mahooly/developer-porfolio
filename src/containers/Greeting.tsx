@@ -20,12 +20,13 @@ const Greeting: React.FC = () => {
                                 <p
                                     className="greeting-text-p subTitle"
                                 >
-                                    I'm a passionate Full Stack web developer with experience developing Full Stack web
-                                    applications with Python, Django, React.js, and Cloud Technologies. I am strongly
-                                    interested in learning new technologies and implementing them in my projects. I'm a
-                                    self-motivated and hardworking individual who is always ready to learn new things
-                                    and
-                                    work in a team.
+                                    I am an experienced Full Stack Developer with a solid foundation in computer science
+                                    and engineering. My expertise lies in Python, Django, React.js, Node.js, and
+                                    comprehensive database management. I have a proven track record of developing
+                                    scalable web applications, enhancing network security infrastructures, and
+                                    contributing to AI-based solutions. Committed to continuous learning and innovation,
+                                    I bring a collaborative spirit and a relentless drive to achieve excellence in
+                                    technology solutions.
                                 </p>
                                 <div className="greeting-buttons">
                                     <SocialMedia/>
@@ -34,7 +35,7 @@ const Greeting: React.FC = () => {
                                         <Button
                                             text="See My Resume"
                                             newTab={true}
-                                            href="/"
+                                            href="https://drive.google.com/file/d/14gSfWOVf4VK7Z3voQcG5hlmisMLZy5o7/view?usp=sharing"
                                         />
                                     </div>
                                 </div>

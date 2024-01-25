@@ -10,7 +10,7 @@ function Header() {
                     <a href="/" className="logo">
                         <img src={require("../assets/images/profile.jpg")} alt="Mahtab Movahedian Attar Logo"
                              className="logo-image"/>
-                        <span className="logo-name">Mahtab Movahedian</span>
+                        <span className="logo-name">Mahtab Movahedian Attar</span>
                     </a>
                 </div>
                 <input className="menu-btn" type="checkbox" id="menu-btn"/>

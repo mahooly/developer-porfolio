@@ -1,15 +1,15 @@
 @font-face {
-  font-family: "Agustina Regular";
+  font-family: "Roboto Light";
   font-style: normal;
   font-weight: normal;
-  src: local("Agustina Regular"),
-    url("../assets/fonts/Agustina.woff") format("woff");
+  src: local("Roboto Light"),
+    url("../assets/fonts/Roboto-Light.ttf") format("woff");
   font-display: swap;
 }
 @font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat"),
-    url("../assets/fonts/Montserrat-Regular.ttf") format("woff");
+  font-family: "Roboto Condensed Light";
+  src: local("Roboto Condensed Light"),
+    url("../assets/fonts/RobotoCondensed-Light.ttf") format("woff");
   font-display: swap;
 }
 code {
@@ -22,7 +22,7 @@ body {
 }
 body {
   margin: 0;
-  font: 19px / 23px Montserrat, "Montserrat", sans-serif;
+  font: 19px / 23px "Roboto Light", "Roboto Condensed Light", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgba(173, 216, 230, 0.1) !important;

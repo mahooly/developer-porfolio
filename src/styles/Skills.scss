@@ -10,6 +10,18 @@
   margin-left: 50px;
 }
 
+.skills-text {
+  display: flex; // Make the .skill divs flex containers as well
+  flex-direction: row; // Arrange children (icon and text) in a row
+  align-items: flex-start; // Vertically center the icon and text
+  gap: 10px; // Space between icon and text
+  padding: 5px; // Padding around the items
+}
+
+.circle {
+  color: #0e76a8;
+  margin-top: 3px;
+}
 .skills-main-div > * {
   flex: 1;
   margin-bottom: 30px;
